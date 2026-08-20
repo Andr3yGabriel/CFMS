@@ -1,11 +1,15 @@
+<script setup>
+    import { RouterLink } from 'vue-router';
+</script>
+
 <template>
     <header>
         <img src="/Logo.png" /> 
         <nav>
-            <p>Home</p>
-            <p>Dados</p>
-            <p>Mapa</p>
-            <p>Contato</p>
+            <RouterLink to="/">Home</RouterLink>
+            <RouterLink to="/dados">Dados</RouterLink>
+            <RouterLink to="/mapa">Mapa</RouterLink>
+            <RouterLink to="/sobre">Sobre</RouterLink>
         </nav>
     </header>
 </template>
