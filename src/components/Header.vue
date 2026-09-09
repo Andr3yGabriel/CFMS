@@ -4,7 +4,10 @@
 
 <template>
     <header>
-        <img src="/Logo.png" /> 
+        <div>
+            <img src="/Logo.png" /> 
+            <p>CFMS - IFB</p>
+        </div>
         <nav>
             <RouterLink to="/">Home</RouterLink>
             <RouterLink to="/dados">Dados e Indicadores</RouterLink>
