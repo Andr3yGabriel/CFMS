@@ -7,9 +7,9 @@
         <img src="/Logo.png" /> 
         <nav>
             <RouterLink to="/">Home</RouterLink>
-            <RouterLink to="/dados">Dados</RouterLink>
-            <RouterLink to="/mapa">Mapa</RouterLink>
-            <RouterLink to="/sobre">Sobre</RouterLink>
+            <RouterLink to="/dados">Dados e Indicadores</RouterLink>
+            <RouterLink to="/mapa">Monitoramento</RouterLink>
+            <RouterLink to="/sobre">Contato</RouterLink>
         </nav>
     </header>
 </template>
