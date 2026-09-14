@@ -19,24 +19,26 @@ defineProps({
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 156px;
+        gap: clamp(1.5rem, 6vw, 9.75rem);
         background-color: white;
         color: black;
-        height: 563px;
-        width: 391px;
-        border-radius: 30px;
-        padding: 20px;
+        min-height: clamp(16rem, 29vw, 35.2rem);
+        border-radius: var(--radius);
+        padding: clamp(1rem, 1.5vw, 1.25rem);
         font-family: "Inter", sans-serif;
     }
 
     h3 {
         font-weight: 200;
-        font-size: 48px;
+        font-size: var(--fs-title);
+        margin: 0.5em 0 0;
     }
 
     p {
         font-weight: 200;
-        font-size: 32px;
+        font-size: var(--fs-body);
         text-align: justify;
+        hyphens: auto;
+        margin: 0;
     }
 </style>

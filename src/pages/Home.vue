@@ -56,11 +56,13 @@
 </template>
 
 <style scoped>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
     h1 {
-        font-size: 64px;
+        font-size: var(--fs-display);
         font-weight: normal;
+    }
+
+    p {
+        hyphens: auto;
     }
 
     .home {
@@ -71,8 +73,10 @@
         display: flex;
         flex-direction: column;
         background-image: url("/unsplash_kbTp7dBzHyY.png");
-        height: 92vh;
-        padding: 40px;
+        background-size: cover;
+        background-position: center;
+        min-height: 92vh;
+        padding: clamp(1.25rem, 2.1vw, 2.5rem);
         color: white;
     }
 
@@ -81,142 +85,144 @@
     }
 
     .text-content {
-        height: fit-content;
-        width: 1070px;
+        max-width: 67rem;
         font-family: "Inter", sans-serif;
-        font-size: 32px;
+        font-size: var(--fs-body);
         font-weight: 200;
         text-align: justify;
-        margin-bottom: 70px;
+        margin-bottom: clamp(2rem, 3.6vw, 4.375rem);
     }
 
     .buttons {
         display: flex;
-        flex-direction: space-between;
-        gap: 55px;
+        flex-wrap: wrap;
+        gap: clamp(1rem, 2.9vw, 3.4375rem);
     }
 
     .buttons button {
         background-color: rgba(0, 0, 0, 0.39);
-        width: 390px;
-        height: 120px;
+        width: clamp(9rem, 20.3vw, 24.375rem);
+        height: clamp(3.5rem, 6.25vw, 7.5rem);
         border: 1px solid black;
-        border-radius: 30px;
-        
-        font-size: 36px;
+        border-radius: var(--radius);
+        cursor: pointer;
+
+        font-size: var(--fs-button);
         font-weight: 200;
         color: white;
     }
 
     .map-info {
         background-color: black;
-        height: 100vh;
+        min-height: 100vh;
         display: flex;
         flex-direction: column;
-        padding: 0px 60px 0px 60px; 
-        gap: 100px;
+        padding: 0 clamp(1.25rem, 3.1vw, 3.75rem) clamp(2rem, 4vw, 4rem);
+        gap: clamp(2rem, 5.2vw, 6.25rem);
     }
 
     .map-info h1 {
-        margin: 60px 0px 0px 60px;
+        margin: clamp(2rem, 3.1vw, 3.75rem) 0 0 clamp(0rem, 3.1vw, 3.75rem);
     }
 
     .cards {
-        display: flex;
-        flex-direction: row;
-        gap: 50px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+        gap: clamp(1.25rem, 2.6vw, 3.125rem);
     }
 
     .about {
         background-color: #0A192F;
-        height: 100vh;
+        min-height: 100vh;
         display: flex;
         flex-direction: column;
-        padding: 0px 90px 0px 90px;
+        padding: 0 clamp(1.25rem, 4.7vw, 5.625rem) clamp(2rem, 4vw, 4rem);
         font-family: "Inter", sans-serif;
     }
 
     .about h2 {
         font-weight: 200;
-        font-size: 48px;
+        font-size: var(--fs-title);
     }
 
     .about p {
-        width: 1400px;
-        font-size: 40px;
+        max-width: 87.5rem;
+        font-size: var(--fs-lead);
         font-weight: 200;
         text-align: justify;
     }
 
     .contact-form {
         background-color: black;
-        height: 100vh;
+        min-height: 100vh;
         display: flex;
-        padding: 0px 70px 0px 70px;
+        flex-wrap: wrap;
+        padding: clamp(2rem, 4vw, 4rem) clamp(1.25rem, 3.6vw, 4.375rem);
         font-family: "Inter", sans-serif;
         align-items: center;
-        gap: 80px;
+        gap: clamp(2rem, 4.2vw, 5rem);
     }
 
     .contact-form h3 {
         font-weight: bold;
-        font-size: 28px;
+        font-size: var(--fs-small);
     }
 
     .contact-form button {
         background-color: #757575;
         color: black;
-        font-size: 28px;
+        font-size: var(--fs-small);
         font-weight: bold;
-        width: 411px;
-        height: 76px;
+        width: min(100%, 25.6875rem);
+        height: clamp(3rem, 4vw, 4.75rem);
         border: none;
-        border-radius: 30px;
+        border-radius: var(--radius);
+        cursor: pointer;
     }
 
     .contact-form p {
-        width: 976px;
-        font-size: 48px;
+        flex: 1 1 22rem;
+        max-width: 61rem;
+        font-size: var(--fs-title);
         font-weight: normal;
         text-align: justify;
-        max-height: 580px;
     }
 
     .form {
+        flex: 0 1 36rem;
         background-color: white;
-        padding: 40px 20px;
+        padding: clamp(1.5rem, 2.1vw, 2.5rem) clamp(1rem, 1.5vw, 1.25rem);
         display: flex;
         flex-direction: column;
         gap: 20px;
         color: black;
-        height: 610px;
-        width: 576px;
-        border-radius: 30px;
-        margin-top: 60px;
+        border-radius: var(--radius);
         align-items: center;
     }
 
     .inputs {
         display: flex;
         flex-direction: column;
-        gap: 25px;
+        gap: clamp(1rem, 1.3vw, 1.5625rem);
+        width: 100%;
+        max-width: 27rem;
     }
 
     .inputs input {
         background-color: #B3B3B3;
-        height: 80px;
-        width: 432px;
+        height: clamp(3rem, 4.2vw, 5rem);
+        width: 100%;
+        padding: 0 10px;
         border: none;
+        font-size: var(--fs-small);
     }
 
     .inputs input::placeholder {
-        padding-left: 10px;
         color: #595959;
         font-weight: bold;
-        font-size: 28px;
     }
 
     #message-input {
-        height: 160px;
+        height: clamp(6rem, 8.3vw, 10rem);
     }
 </style>

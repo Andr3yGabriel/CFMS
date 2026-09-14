@@ -5,7 +5,7 @@
 <template>
     <header>
         <div>
-            <img src="/Logo.png" /> 
+            <img src="/Logo.png" />
             <p>CFMS - IFB</p>
         </div>
         <nav>
@@ -21,16 +21,29 @@
     header {
         background-color: #000000;
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
-        padding: 10px 25px;
+        gap: 0.5rem 1rem;
+        padding: 10px clamp(1rem, 1.3vw, 1.5625rem);
+    }
+
+    header img {
+        height: clamp(3rem, 5.3vw, 6.3rem);
+        width: auto;
     }
 
     nav {
         color: #ffffff;
         display: flex;
-        gap: 38px;
-        font-size: 38px;
+        flex-wrap: wrap;
+        gap: clamp(1rem, 2vw, 2.375rem);
+        font-size: var(--fs-nav);
         font-weight: normal;
+    }
+
+    nav a {
+        color: inherit;
+        text-decoration: none;
     }
 </style>
