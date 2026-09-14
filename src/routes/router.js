@@ -1,4 +1,4 @@
-import { createRouter, createMemoryHistory } from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
 import Home from "@/pages/Home.vue";
 import Dados from "@/pages/Dados.vue";
 import Mapa from "@/pages/Mapa.vue";
@@ -28,7 +28,7 @@ const routes = [
 ];
 
 const router = createRouter({
-    history: createMemoryHistory(),
+    history: createWebHistory(import.meta.env.BASE_URL),
     routes
 });
 
