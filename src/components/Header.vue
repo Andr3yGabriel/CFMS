@@ -53,6 +53,19 @@
 
     nav a {
         color: inherit;
-        text-decoration: none;
+        text-decoration: underline transparent;
+        text-decoration-thickness: 0.1em;
+        text-underline-offset: 0.2em;
+        transition: color 0.2s, text-decoration-color 0.2s;
+    }
+
+    nav a:hover {
+        color: #FDBA74;
+    }
+
+    /* Classe aplicada pelo RouterLink no item da rota atual */
+    nav a.router-link-exact-active {
+        color: #F97316;
+        text-decoration-color: currentColor;
     }
 </style>
