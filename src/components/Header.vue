@@ -4,7 +4,7 @@
 
 <template>
     <header>
-        <div>
+        <div class="logo-titulo">
             <img src="/Logo.png" />
             <p>CFMS - IFB</p>
         </div>
@@ -18,6 +18,15 @@
 </template>
 
 <style scoped>
+    .logo-titulo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        font-size: var(--fs-nav);
+    }
+
     header {
         background-color: #000000;
         display: flex;
